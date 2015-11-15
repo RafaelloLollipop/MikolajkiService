@@ -21,8 +21,9 @@ class MikolajkiGenerator(object):
         toaddrs  = user.email
         msg = 'Witaj {username}, wylosowales {chosen_one}. Kup cos fajnego!\n'.format(username=user.username, chosen_one=chosen_one.username)
         self.make_backup_message(msg)
-        username = 'smt'
-        password = 'smt'
+        self.w_razie_w(user.username, msg)
+        username = 'niven09@gmail.com'
+        password = 'test'
         server = smtplib.SMTP('smtp.gmail.com:587')
         server.ehlo()
         server.starttls()
@@ -42,7 +43,8 @@ class MikolajkiGenerator(object):
 
     def make_backup_message(self, text):
         with open('backup.txt','a+') as f:
-
             f.writelines(text)
 
-
+    def w_razie_w(self,username, msg):
+        with open(username + '_backup.txt','a+') as f:
+            f.writelines(msg)

@@ -12,16 +12,16 @@ class MikolajkiGeneratorTest(unittest.TestCase):
         mikolajs = []
         mikolajs.append(Mikolaj("Rafal Lizon", 'lizonr@gmail.com'))
         mikolajs.append(Mikolaj("Antek Grzanka", 'antoni.grzanka@gmail.com'))
-        mikolajs.append(Mikolaj("Kinga Hepner", 'kinga.hepner@gmail.com'))
-        mikolajs.append(Mikolaj("Paulina Karp", 'paulina.karp@gmail.com'))
-        mikolajs.append(Mikolaj("Slawomir Holda", 'slawomir.holda@gmail.com'))
-        mikolajs.append(Mikolaj("Andrzej Romanski", 'andrzej.romanski@gmail.com'))
-        mikolajs.append(Mikolaj("Bartek Lizon", 'bartek.lizon@gmail.com'))
+        # mikolajs.append(Mikolaj("Kinga Hepner", 'kinga.hepner@gmail.com'))
+        # mikolajs.append(Mikolaj("Paulina Karp", 'paulina.karp@gmail.com'))
+        # mikolajs.append(Mikolaj("Slawomir Holda", 'slawomir.holda@gmail.com'))
+        # mikolajs.append(Mikolaj("Andrzej Romanski", 'andrzej.romanski@gmail.com'))
+        # mikolajs.append(Mikolaj("Bartek Lizon", 'bartek.lizon@gmail.com'))
         return mikolajs
 
-    #
-    # def test(self):
-    #     self.mikolajki.make_lottery()
+
+    def test(self):
+        self.mikolajki.make_lottery()
 
     def test_mikolaj_can_not_make_present_for_himself(self):
         results = self.mikolajki.chose_chosen_one()
